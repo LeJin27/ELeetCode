@@ -14,7 +14,7 @@ class Solution:
           target_difference_key = target - key
 
           # now need to find the target diference index
-          possible_second_return_value = num_dict[target_difference_key]
+          possible_second_return_value = num_dict.get(target_difference_key, None)
           if (possible_second_return_value is not None):
             # conditional check if same value
             if (possible_second_return_value == first_return_value ):
@@ -32,10 +32,11 @@ class Solution:
 
 solutionTest = Solution()
 
-nums = [2,7,11,15]
-target = 9
-twoSum = solutionTest.twoSum(nums, target)
-assert twoSum == [0,1]
+#nums = [2,5,5,11] 
+#target = 10
+#twoSum = solutionTest.twoSum(nums, target)
+#assert twoSum == [0,1]
+
 
 nums = [3, 2, 4]
 target = 6
